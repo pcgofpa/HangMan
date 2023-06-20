@@ -4,6 +4,7 @@ import random
 from turtle import pos
 from hangman_words import word_list
 from hangman_art import logo
+from hangman_art import end_game
 from hangman_art import stages
 
 # variables
@@ -41,7 +42,7 @@ while not end_of_game:
         print(f"You guessed {guess}, that is not in the word. You lose a life. You have {lives} guesses remaining.")
         if lives == 0:
             end_of_game = True
-            print("You lose.")
+            print(f"{end_game} You Lose")
 
 # Join all the elements in the list and turn it into a String.
     print(f"{' '.join(display)}")
